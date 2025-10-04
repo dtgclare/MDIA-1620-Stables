@@ -70,8 +70,8 @@
 let horseName = "Biscuit";
 let horseAge = 4;
 let isHorseInside = true;
-let monthlyBoardCost = 3000;
-let lateFee = monthlyBoardCost * 1.2;
+let monthlyFee = 3000;
+let latePayment = monthlyFee * 0.2;
 
 let visitorMessage =
     "Welcome to the stable everyone" +
@@ -88,7 +88,7 @@ let latePaymentMessage =
     horseName +
     "," +
     " It will cost $" +
-    lateFee +
+    latePayment +
     ".";
 
 console.log(visitorMessage);
@@ -115,69 +115,72 @@ console.log(latePaymentMessage);
 
 // Lab #2 //
 
-let horseObjOne = {
-    name: "Gigelle",
-    nickname: "G",
-    favoriteTreat: "Leaves",
-    age: 8,
-    monthlyRent: 360,
-    location: true,
-    personality: "Shy",
-    scent: "Vanila",
-};
+let horses = {
+    Gigelle: {
+        name: "Gigelle",
+        nickname: "G",
+        favoriteTreat: "Leaves",
+        age: 8,
+        rent: monthlyFee,
+        isInside: isHorseInside,
+        personality: "Shy",
+        scent: "Vanila",
+    },
 
-let horseObjTwo = {
-    name: "Zemma",
-    nickname: "Zizi",
-    favoriteTreat: "Zucchini",
-    age: 7,
-    monthlyRent: 591,
-    location: true,
-    personality: "Fearful",
-    scent: "Floral",
-};
+    Zemma: {
+        name: "Zemma",
+        nickname: "Zizi",
+        favoriteTreat: "Zucchini",
+        age: 7,
+        rent: monthlyFee,
+        isInside: true,
+        personality: "Fearful",
+        scent: "Floral",
+    },
 
-let horseObjThree = {
-    name: "Peggie",
-    nickname: "Gou",
-    favoriteTreat: "Pasta",
-    age: 12,
-    monthlyRent: 1240,
-    location: false,
-    personality: "Social",
-    scent: "Woody",
+    Peggie: {
+        name: "Peggie",
+        nickname: "Gou",
+        favoriteTreat: "Pasta",
+        age: 12,
+        rent: monthlyFee,
+        isInside: false,
+        personality: "Social",
+        scent: "Woody",
+    },
 };
 
 // week 1 horse info //
 
-let horseObjFour = {
-    name: "Biscuit",
+let oldHorse = {
+    name: "horseName",
     nickname: "Butter",
-    favoriteTreat: "Apple Crumnble Pie",
+    favoriteTreat: "Apple Crumble Pie",
     age: 4,
     monthlyRent: 777,
-    location: true,
+    isInside: true,
     personality: "Shy",
     scent: "Citrus",
 };
 
 // another horse info //
 
-let horseObjFive = {
+let newHorse = {
     name: "Autumn",
     nickname: "Hazel",
     favoriteTreat: "Pumpkin Spice Tart",
     age: 2,
     monthlyRent: 294,
-    location: false,
+    isInside: false,
     personality: "Social",
     scent: "Water",
 };
 
-horses[0].isHungry = true;
-horses[1].isHungry = true;
-horses[2].isHungry = false;
-horses[3].isHungry = true;
-horses[4].isHungry = false;
+horses.Autumn = newHorse;
+
+horses.Gigelle.isHungry = true;
+horses.Zemma.isHungry = true;
+horses.Peggie.isHungry = false;
+horses.Autumn.isHungry = true;
 
 console.log(horses);
