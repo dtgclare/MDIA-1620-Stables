@@ -52,7 +52,7 @@
 // NOTE: UNLESS SPECIFIED, VARIABLE NAMING IS UP TO YOU. THERE SHOULD BE NO HARD-CODED
 // NUMBERS OR STRINGS WHERE VARIBALES WOULD BE PREFERRED.
 
-//------------------------- Seting up shop (Lab #1, Week 3) -------------------------//
+//------------------------- Seting up shop (Lab #1a, Week 3) -------------------------//
 
 // Declare variables with values for the following:
 // - the name of the horse at the stable
@@ -65,7 +65,7 @@
 // Create a variable and use it to store a message that monthly payment is late, and the amount owing.
 // Include the name of your horse in the message.
 
-// Lab #1 //
+// Lab #1a //
 
 let horseName = "Biscuit";
 let horseAge = 4;
@@ -94,7 +94,7 @@ let latePaymentMessage =
 console.log(visitorMessage);
 console.log(latePaymentMessage);
 
-//------------------------- First day (Lab #2, Week 4) -------------------------//
+//------------------------- First day (Lab #1b, Week 4) -------------------------//
 
 // Using an object, add at least 3 horses to your stables.
 //
@@ -113,7 +113,7 @@ console.log(latePaymentMessage);
 // Initialize new property to your horses: a boolean that allows you to check if your horse
 // is hungry or not. Use dot notation.
 
-// Lab #2 //
+// Lab #1b //
 
 let horses = {
     Gigelle: {
@@ -183,4 +183,55 @@ horses.Zemma.isHungry = true;
 horses.Peggie.isHungry = false;
 horses.Autumn.isHungry = true;
 
-console.log(horses);
+console.log(horses.Gigelle.name + " is " + horses.Gigelle.age + " years old!");
+console.log(horses.Zemma.name + " is " + horses.Zemma.age + " years old!");
+
+//------------------------- Growing our business (Lab #2, Week 6) -------------------------//
+
+// Create a variable that stores your total number of stalls.
+// Create a function that logs out how many stalls are available, given how many horses you have in your stable.
+
+// Create a function that logs out how much will an individual horse will owe if rent is
+// paid late. Invoke the function.
+
+// Create and invoke a function that returns (not logs) the nickname of a chosen horse. Log out
+// the return value outside of the function
+
+// lab #2 //
+
+let totalStalls = 7;
+let totalhorses = 4;
+
+function availableStalls(horses) {
+    let availableStalls = totalStalls - totalhorses;
+    console.log(
+        "There are " + availableStalls + " stalls available in my stables" + "!"
+    );
+}
+availableStalls(3);
+
+let rentPayment = 777;
+
+function lateRentPayment(rent) {
+    const lateRentPayment = rentPayment * 2;
+    let totalAmount = rentPayment * 2;
+    console.log(
+        "If your payment is late" +
+            "," +
+            " you will pay " +
+            totalAmount +
+            " dollars" +
+            " for an individual horse" +
+            "."
+    );
+}
+lateRentPayment(1554);
+
+function horseNickname(horseName = "Zemma") {
+    let nickname = horseName;
+    return nickname;
+}
+
+let finalNickname = horseNickname("Zemma");
+
+console.log("The one of my horse's nickname is " + finalNickname + "!");
