@@ -1,20 +1,5 @@
 // Welcome!
 //
-<<<<<<< HEAD
-//
-//
-//               /\       /\
-//              /  \_____/  \
-//             /             \
-//            |    o     o    |
-//            |       >       |
-//            |     \___/     |
-//             \             /
-//              \___________/
-//
-//
-
-=======
 //                                                  #    #
 //                                             %%% ##   ##
 //                                          %%%%% ###%🎀###
@@ -56,7 +41,6 @@
 //                                 ####                    ###
 //                                                         ####
 //                                                          ##
->>>>>>> origin/final
 //
 // This is a template for the final project. You'll be setting up a stable and making
 // sure it runs smoothly.
@@ -76,16 +60,6 @@
 // Create a variable and use it to store the cost of a late payment fee.
 // Create a variable and use it to store the number of available stalls in the stable.
 
-<<<<<<< HEAD
-let horses = [];
-let welcomeMessage = "Welcome to my final stables!";
-let latePayment = 377;
-let numberOfAvailableStalls = 7;
-
-console.log(welcomeMessage);
-
-=======
->>>>>>> origin/final
 //------------------------- First day -------------------------//
 
 // Using a constructor, add at least 3 horses to your stables.
@@ -106,124 +80,11 @@ console.log(welcomeMessage);
 // Initialize new property to your horses: a boolean that allows you to check if your horse
 // is hungry or not. Use dot notation.
 
-<<<<<<< HEAD
-function Horse(
-    name,
-    nickname,
-    favoriteTreat,
-    age,
-    monthlyRentFee,
-    isHorseInside,
-    scent,
-    personality
-) {
-    this.name = name;
-    this.nickname = nickname;
-    this.favoriteTreat = favoriteTreat;
-    this.age = age;
-    this.monthlyRentFee = monthlyRentFee;
-    this.isHorseInside = isHorseInside;
-    this.scent = scent;
-    this.personality = personality;
-}
-const firstHorse = {
-    name: "Biscuit",
-    nickname: "Butter",
-    favoriteTreat: "Shortcake",
-    age: 4,
-    monthlyRentFee: 222,
-    isHorseInside: true,
-    scent: "Vanilla",
-    personality: "Fearful",
-    isHungry: false,
-};
-
-const secondHorse = {
-    name: "Pumpkin",
-    nickname: "Chai",
-    favoriteTreat: "Pumpkin pie",
-    age: 7,
-    monthlyRentFee: 333,
-    isHorseInside: true,
-    scent: "Spice",
-    personality: "Sensitivity",
-    isHungry: false,
-};
-
-const thirdHorse = {
-    name: "Jaguar",
-    nickname: "Grrr",
-    favoriteTreat: "Fried Chicken",
-    age: 3,
-    monthlyRentFee: 444,
-    isHorseInside: false,
-    scent: "Earthy",
-    personality: "Playful",
-    introduce: function () {
-        console.log(
-            "Hi there," +
-                "This is " +
-                this.name +
-                "," +
-                "and " +
-                this.name +
-                "is" +
-                this.age +
-                "years old and he loves " +
-                this.favoriteTreat +
-                "!"
-        );
-    },
-    rentNotice: function () {
-        console.log(
-            "Your horse" +
-                this.name +
-                "rent payment will" +
-                this.monthlyRentFee +
-                "!"
-        );
-    },
-    isHungry: false,
-};
-
-horses.push(firstHorse, secondHorse, thirdHorse);
-
-let newHorse = {
-    name: "Tarzzan",
-    nickname: "Kki-kki",
-    favoriteTreat: "Hwaiian Pizza",
-    age: 2,
-    monthlyRentFee: 555,
-    isHorseInside: false,
-    scent: "Fruity",
-    personality: "Friendly",
-    isHungry: true,
-};
-
-horses.push(newHorse);
-
-firstHorse.isHungry = false;
-secondHorse.isHungry = false;
-thirdHorse.isHungry = false;
-newHorse.isHungry = true;
-
-console.log(firstHorse.isHungry);
-console.log(secondHorse.isHungry);
-console.log(thirdHorse.isHungry);
-console.log(newHorse.isHungry);
-
-=======
->>>>>>> origin/final
 //------------------------- Stable roster -------------------------//
 
 // We want to keep track of our horses and how they are doing. Paste the data structure
 // of our horse variable below so we can reference it. It is okay to comment it out.
 
-<<<<<<< HEAD
-console.log(horses);
-
-=======
->>>>>>> origin/final
 //---------------------- Growing business ----------------------//
 
 // We've added some horses! Re-assign the variable that contains the number of available stalls.
@@ -244,63 +105,6 @@ console.log(horses);
 // Create and invoke a function that returns (not logs) the nickname of a chosen horse. Log out
 // the return value outside of the function.
 
-<<<<<<< HEAD
-numberOfAvailableStalls = 7;
-const addedHorse = 4;
-availableStalls = numberOfAvailableStalls - addedHorse;
-
-console.log(availableStalls);
-
-if (numberOfAvailableStalls < 2) {
-    console.log("We need to build more stalls");
-} else {
-    console.log("We have " + availableStalls + " available!");
-}
-
-function individualHorseLateFee(horse) {
-    let totalLateFee = horse.monthlyRentFee + latePayment;
-    console.log(
-        "If the rent paid late, " +
-            horse.name +
-            " will pay " +
-            totalLateFee +
-            "."
-    );
-}
-
-individualHorseLateFee(firstHorse);
-individualHorseLateFee(secondHorse);
-individualHorseLateFee(thirdHorse);
-individualHorseLateFee(newHorse);
-
-let checkHorseLikeTreats = "Shortcake";
-
-for (let i = 0; i < horses.length; i++) {
-    let horse = horses[i];
-
-    if (horse.favoriteTreat === checkHorseLikeTreats) {
-        console.log(
-            checkHorseLikeTreats + " is must have treat for " + horse.name + "!"
-        );
-    } else {
-        console.log(
-            checkHorseLikeTreats +
-                " is not must have treat for " +
-                horse.name +
-                ".."
-        );
-    }
-}
-
-function horseNickname(horse) {
-    return horse.nickname;
-}
-
-let resultOfNickname = horseNickname(thirdHorse);
-console.log(resultOfNickname);
-
-=======
->>>>>>> origin/final
 //------------------------- Day to day operations -------------------------//
 
 // Create and invoke a function references one of your unique horse properties. It should
@@ -319,72 +123,6 @@ console.log(resultOfNickname);
 // Bedtime! Update the function that lets your horses outside so that it also calls them
 // in if it is getting dark. Only the horses that moved should log out a message. Invoke the function.
 
-<<<<<<< HEAD
-function horsePersonality(horse) {
-    if (horse.personality === "Playful") {
-        console.log(horse.name + " has playful personality!");
-    } else {
-        console.log(horse.name + " has different personality..");
-    }
-}
-
-horsePersonality(firstHorse);
-horsePersonality(secondHorse);
-horsePersonality(thirdHorse);
-horsePersonality(newHorse);
-
-function moveHorsesOutside() {
-    for (let i = 0; i < horses.length; i++) {
-        horses[i].isHorseInside = false;
-        console.log(
-            horses[i].name + " has been moved outside to spend time in the sun!"
-        );
-    }
-}
-
-moveHorsesOutside();
-
-function horseLocation(horse) {
-    horse.isHorseInside = !horse.isHorseInside;
-    if (horse.isHorseInside) {
-        console.log(horse.name + " moved inside!");
-    } else {
-        console.log(horse.name + " moved outside!");
-    }
-}
-
-horseLocation(firstHorse);
-horseLocation(secondHorse);
-horseLocation(thirdHorse);
-horseLocation(newHorse);
-
-function feedHorses(horse) {
-    if (!horse.isHorseInside) {
-        horse.isHorseInside = true;
-        console.log("Come inside to eat, " + horse.name + "!");
-    }
-    console.log("Come inside and get your favorite treat, " + horse.name + "!");
-}
-
-feedHorses(firstHorse);
-feedHorses(secondHorse);
-feedHorses(thirdHorse);
-feedHorses(newHorse);
-
-function bedTime(horse) {
-    if (!horse.isHorseInside) {
-        horse.isHorseInside = true;
-        console.log("Come inside for bed time, " + horse.name + "!");
-    }
-}
-
-bedTime(firstHorse);
-bedTime(secondHorse);
-bedTime(thirdHorse);
-bedTime(newHorse);
-
-=======
->>>>>>> origin/final
 //------------------------- Bonus -------------------------//
 
 // Replace the ascii art at the top of the file with art representing your stable.
