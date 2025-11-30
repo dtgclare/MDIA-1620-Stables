@@ -1,5 +1,6 @@
 // Welcome!
 //
+<<<<<<< HEAD
 //
 //
 //               /\       /\
@@ -13,6 +14,49 @@
 //
 //
 
+=======
+//                                                  #    #
+//                                             %%% ##   ##
+//                                          %%%%% ###%🎀###
+//                                         %%%%% ### %%% #
+//                                       %%%%%% ### %%% ###
+//                                        %%%% ## %% #######
+//                                       %%%%% # %% #@#####
+//                                     %%%%%% # % #########
+//                                    %%%%% ##### #########
+//                          ###        %% ####### #########
+//                 %%% ############    ########### ########
+//              %%%% ############################### #######
+//            %%%%% ################################## ######
+//          %%%%%% #################################### #C###
+//         %%%🌸%% #####################################  ###
+//         %%%%% #######################################
+//        %%%%%% ############### BEANS ##################
+//     % %%%%%%% ############### BEANS ##################
+//      %%%%%%%%% ############## BEANS ##################
+//     %%%%%%%%%% ########################################
+//  %%% %%%%%%%%   ###### ################################
+//    %%%%%%%%      ###### #################### ##########
+// % %%%🌸%%%%        ####### ########### ###### ##########
+//  %%%%%%%%%         #######  ########### ###### ########
+// %%%%%%%%%%          ##### ###  ######### ####### ######
+//  %%%%%%%%%%          #### ##               ####### ####
+//  %🌸%%%%%%%%%           ## #                  ##### ###
+//   %%  %% % %%         # ##                      ## ###
+//     %   %    %        # ###                      # ###
+//                        # ###                     ## ###
+//                        # ###                     ## ###
+//                        # ####                   #### ##
+//                       ### ###                  ##### ###
+//                      ####  ###                 ####   ##
+//                     #####   ###                 ##    ##
+//                    #####    ####                      ###
+//                     ##        ###                     ###
+//                                ####                     ##
+//                                 ####                    ###
+//                                                         ####
+//                                                          ##
+>>>>>>> origin/final
 //
 // This is a template for the final project. You'll be setting up a stable and making
 // sure it runs smoothly.
@@ -32,6 +76,7 @@
 // Create a variable and use it to store the cost of a late payment fee.
 // Create a variable and use it to store the number of available stalls in the stable.
 
+<<<<<<< HEAD
 let horses = [];
 let welcomeMessage = "Welcome to my final stables!";
 let latePayment = 377;
@@ -39,6 +84,8 @@ let numberOfAvailableStalls = 7;
 
 console.log(welcomeMessage);
 
+=======
+>>>>>>> origin/final
 //------------------------- First day -------------------------//
 
 // Using a constructor, add at least 3 horses to your stables.
@@ -59,6 +106,7 @@ console.log(welcomeMessage);
 // Initialize new property to your horses: a boolean that allows you to check if your horse
 // is hungry or not. Use dot notation.
 
+<<<<<<< HEAD
 function Horse(
     name,
     nickname,
@@ -164,13 +212,18 @@ console.log(secondHorse.isHungry);
 console.log(thirdHorse.isHungry);
 console.log(newHorse.isHungry);
 
+=======
+>>>>>>> origin/final
 //------------------------- Stable roster -------------------------//
 
 // We want to keep track of our horses and how they are doing. Paste the data structure
 // of our horse variable below so we can reference it. It is okay to comment it out.
 
+<<<<<<< HEAD
 console.log(horses);
 
+=======
+>>>>>>> origin/final
 //---------------------- Growing business ----------------------//
 
 // We've added some horses! Re-assign the variable that contains the number of available stalls.
@@ -191,6 +244,7 @@ console.log(horses);
 // Create and invoke a function that returns (not logs) the nickname of a chosen horse. Log out
 // the return value outside of the function.
 
+<<<<<<< HEAD
 numberOfAvailableStalls = 7;
 const addedHorse = 4;
 availableStalls = numberOfAvailableStalls - addedHorse;
@@ -245,6 +299,8 @@ function horseNickname(horse) {
 let resultOfNickname = horseNickname(thirdHorse);
 console.log(resultOfNickname);
 
+=======
+>>>>>>> origin/final
 //------------------------- Day to day operations -------------------------//
 
 // Create and invoke a function references one of your unique horse properties. It should
@@ -263,6 +319,7 @@ console.log(resultOfNickname);
 // Bedtime! Update the function that lets your horses outside so that it also calls them
 // in if it is getting dark. Only the horses that moved should log out a message. Invoke the function.
 
+<<<<<<< HEAD
 function horsePersonality(horse) {
     if (horse.personality === "Playful") {
         console.log(horse.name + " has playful personality!");
@@ -326,6 +383,8 @@ bedTime(secondHorse);
 bedTime(thirdHorse);
 bedTime(newHorse);
 
+=======
+>>>>>>> origin/final
 //------------------------- Bonus -------------------------//
 
 // Replace the ascii art at the top of the file with art representing your stable.
