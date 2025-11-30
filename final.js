@@ -1,46 +1,17 @@
 // Welcome!
 //
-//                                                  #    #
-//                                             %%% ##   ##
-//                                          %%%%% ###%🎀###
-//                                         %%%%% ### %%% #
-//                                       %%%%%% ### %%% ###
-//                                        %%%% ## %% #######
-//                                       %%%%% # %% #@#####
-//                                     %%%%%% # % #########
-//                                    %%%%% ##### #########
-//                          ###        %% ####### #########
-//                 %%% ############    ########### ########
-//              %%%% ############################### #######
-//            %%%%% ################################## ######
-//          %%%%%% #################################### #C###
-//         %%%🌸%% #####################################  ###
-//         %%%%% #######################################
-//        %%%%%% ############### BEANS ##################
-//     % %%%%%%% ############### BEANS ##################
-//      %%%%%%%%% ############## BEANS ##################
-//     %%%%%%%%%% ########################################
-//  %%% %%%%%%%%   ###### ################################
-//    %%%%%%%%      ###### #################### ##########
-// % %%%🌸%%%%        ####### ########### ###### ##########
-//  %%%%%%%%%         #######  ########### ###### ########
-// %%%%%%%%%%          ##### ###  ######### ####### ######
-//  %%%%%%%%%%          #### ##               ####### ####
-//  %🌸%%%%%%%%%           ## #                  ##### ###
-//   %%  %% % %%         # ##                      ## ###
-//     %   %    %        # ###                      # ###
-//                        # ###                     ## ###
-//                        # ###                     ## ###
-//                        # ####                   #### ##
-//                       ### ###                  ##### ###
-//                      ####  ###                 ####   ##
-//                     #####   ###                 ##    ##
-//                    #####    ####                      ###
-//                     ##        ###                     ###
-//                                ####                     ##
-//                                 ####                    ###
-//                                                         ####
-//                                                          ##
+//
+//
+//               /\       /\
+//              /  \_____/  \
+//             /             \
+//            |    o     o    |
+//            |       >       |
+//            |     \___/     |
+//             \             /
+//              \___________/
+//
+//
 //
 // This is a template for the final project. You'll be setting up a stable and making
 // sure it runs smoothly.
@@ -59,6 +30,13 @@
 // Create a variable and use it to store a message that welcomes visitors to the stable.
 // Create a variable and use it to store the cost of a late payment fee.
 // Create a variable and use it to store the number of available stalls in the stable.
+
+let horses = [];
+let welcomeMessage = "Welcome to my final stables!";
+let latePayment = 377;
+let numberOfAvailableStalls = 7;
+
+console.log(welcomeMessage);
 
 //------------------------- First day -------------------------//
 
@@ -80,10 +58,116 @@
 // Initialize new property to your horses: a boolean that allows you to check if your horse
 // is hungry or not. Use dot notation.
 
+function Horse(
+    name,
+    nickname,
+    favoriteTreat,
+    age,
+    monthlyRent,
+    isHorseInside,
+    scent,
+    personality,
+    isHungry
+) {
+    this.name = name;
+    this.nickname = nickname;
+    this.favoriteTreat = favoriteTreat;
+    this.age = age;
+    this.monthlyRent = monthlyRent;
+    this.isHorseInside = isHorseInside;
+    this.scent = scent;
+    this.personality = personality;
+    this.isHungry = isHungry;
+    this.introduce = function () {
+        console.log(
+            "Hi, This is " +
+                this.name +
+                " but you can call " +
+                this.nickname +
+                ". " +
+                this.name +
+                " is " +
+                this.age +
+                " years old!"
+        );
+    };
+    this.rentNotice = function () {
+        console.log(
+            "Your horse" +
+                this.name +
+                " rent payment will" +
+                this.monthlyRent +
+                "!"
+        );
+    };
+}
+
+const firstHorse = new Horse(
+    "Biscuit",
+    "Butter",
+    "Shortcake",
+    4,
+    222,
+    true,
+    "Vanila",
+    "Fearful",
+    true
+);
+const secondHorse = new Horse(
+    "Pumpkin",
+    "Chai",
+    "Pumpkin Pie",
+    7,
+    333,
+    true,
+    "Spice",
+    "Shy",
+    false
+);
+const thirdHorse = new Horse(
+    "Jaguar",
+    "Grrr",
+    "Fried Chicken",
+    3,
+    444,
+    false,
+    "Floral",
+    "Playful",
+    false
+);
+
+horses.push(firstHorse, secondHorse, thirdHorse);
+
+let newHorse = {
+    name: "Tarzzan",
+    nickname: "Kki-kki",
+    favoriteTreat: "Hawaiian Pizza",
+    age: 2,
+    monthlyRent: 555,
+    isHorseInside: false,
+    personality: "Friendly",
+    scent: "Woody",
+    isHungry: false,
+};
+
+horses.push(newHorse);
+
+firstHorse.isHungry = true;
+secondHorse.isHungry = false;
+thirdHorse.isHungry = false;
+newHorse.isHungry = false;
+
+console.log(firstHorse.isHungry);
+console.log(secondHorse.isHungry);
+console.log(thirdHorse.isHungry);
+console.log(newHorse.isHungry);
+
 //------------------------- Stable roster -------------------------//
 
 // We want to keep track of our horses and how they are doing. Paste the data structure
 // of our horse variable below so we can reference it. It is okay to comment it out.
+
+console.log(horses);
 
 //---------------------- Growing business ----------------------//
 
@@ -105,6 +189,59 @@
 // Create and invoke a function that returns (not logs) the nickname of a chosen horse. Log out
 // the return value outside of the function.
 
+numberOfAvailableStalls = 7;
+const addedHorse = 4;
+availableStalls = numberOfAvailableStalls - addedHorse;
+
+console.log(availableStalls);
+
+if (availableStalls < 2) {
+    console.log("We need to build more stalls");
+} else {
+    console.log("We have " + availableStalls + " available!");
+}
+
+function individualHorseLateFee(horse) {
+    let totalLateFee = horse.monthlyRent + latePayment;
+    console.log(
+        "If the rent paid late, " +
+            horse.name +
+            " will pay " +
+            totalLateFee +
+            "."
+    );
+}
+individualHorseLateFee(firstHorse);
+individualHorseLateFee(secondHorse);
+individualHorseLateFee(thirdHorse);
+individualHorseLateFee(newHorse);
+
+let checkHorseLikeTreats = "Shortcake";
+
+for (let i = 0; i < horses.length; i++) {
+    let horse = horses[i];
+
+    if (horse.favoriteTreat === checkHorseLikeTreats) {
+        console.log(
+            checkHorseLikeTreats + " is must have treat for " + horse.name + "!"
+        );
+    } else {
+        console.log(
+            checkHorseLikeTreats +
+                " is not must have treat for " +
+                horse.name +
+                ".."
+        );
+    }
+}
+
+function horseNickname(horse) {
+    return horse.nickname;
+}
+
+let resultOfNickname = horseNickname(thirdHorse);
+console.log(resultOfNickname);
+
 //------------------------- Day to day operations -------------------------//
 
 // Create and invoke a function references one of your unique horse properties. It should
@@ -122,6 +259,69 @@
 
 // Bedtime! Update the function that lets your horses outside so that it also calls them
 // in if it is getting dark. Only the horses that moved should log out a message. Invoke the function.
+
+function horsePersonality(horse) {
+    if (horse.personality === "Playful") {
+        console.log(horse.name + " has playful personality!");
+    } else {
+        console.log(horse.name + " has different personality..");
+    }
+}
+
+horsePersonality(firstHorse);
+horsePersonality(secondHorse);
+horsePersonality(thirdHorse);
+horsePersonality(newHorse);
+
+function moveHorsesOutside() {
+    for (let i = 0; i < horses.length; i++) {
+        horses[i].isHorseInside = false;
+        console.log(
+            horses[i].name + " has been moved outside to spend time in the sun!"
+        );
+    }
+}
+
+moveHorsesOutside();
+
+function horseLocation(horse) {
+    horse.isHorseInside = !horse.isHorseInside;
+    if (horse.isHorseInside) {
+        console.log(horse.name + " moved inside!");
+    } else {
+        console.log(horse.name + " moved outside!");
+    }
+}
+
+horseLocation(firstHorse);
+horseLocation(secondHorse);
+horseLocation(thirdHorse);
+horseLocation(newHorse);
+
+function feedHorses(horse) {
+    if (!horse.isHorseInside) {
+        horse.isHorseInside = true;
+        console.log("Come inside to eat, " + horse.name + "!");
+    }
+    console.log("Come inside and get your favorite treat, " + horse.name + "!");
+}
+
+feedHorses(firstHorse);
+feedHorses(secondHorse);
+feedHorses(thirdHorse);
+feedHorses(newHorse);
+
+function bedTime(horse) {
+    if (!horse.isHorseInside) {
+        horse.isHorseInside = true;
+        console.log("Come inside for bed time, " + horse.name + "!");
+    }
+}
+
+bedTime(firstHorse);
+bedTime(secondHorse);
+bedTime(thirdHorse);
+bedTime(newHorse);
 
 //------------------------- Bonus -------------------------//
 
