@@ -190,8 +190,8 @@ console.log(horses);
 // the return value outside of the function.
 
 numberOfAvailableStalls = 7;
-const addedHorse = 4;
-availableStalls = numberOfAvailableStalls - addedHorse;
+let totalHorses = horses.length;
+let availableStalls = numberOfAvailableStalls - totalHorses;
 
 console.log(availableStalls);
 
@@ -273,12 +273,26 @@ horsePersonality(secondHorse);
 horsePersonality(thirdHorse);
 horsePersonality(newHorse);
 
-function moveHorsesOutside() {
-    for (let i = 0; i < horses.length; i++) {
-        horses[i].isHorseInside = false;
-        console.log(
-            horses[i].name + " has been moved outside to spend time in the sun!"
-        );
+function moveHorsesOutside(dark = false) {
+    if (dark) {
+        for (let i = 0; i < horses.length; i++) {
+            if (!horses[i].isHorseInside) {
+                horses[i].isHorseInside = true;
+                console.log(
+                    "Come inside for bed time, " + horses[i].name + "!"
+                );
+            }
+        }
+    } else {
+        for (let i = 0; i < horses.length; i++) {
+            if (horses[i].isHorseInside) {
+                horses[i].isHorseInside = false;
+                console.log(
+                    horses[i].name +
+                        " has been moved outside to spend time in the sun!"
+                );
+            }
+        }
     }
 }
 
@@ -311,17 +325,7 @@ feedHorses(secondHorse);
 feedHorses(thirdHorse);
 feedHorses(newHorse);
 
-function bedTime(horse) {
-    if (!horse.isHorseInside) {
-        horse.isHorseInside = true;
-        console.log("Come inside for bed time, " + horse.name + "!");
-    }
-}
-
-bedTime(firstHorse);
-bedTime(secondHorse);
-bedTime(thirdHorse);
-bedTime(newHorse);
+moveHorsesOutside(true);
 
 //------------------------- Bonus -------------------------//
 
